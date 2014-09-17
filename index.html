@@ -3,29 +3,33 @@
 
 <script type="text/javascript">
 
+ function onLoad(){
+ interval = setInterval("motor()",1);
+ }
 
-window.addEventListener('devicelight', function(event) {
+	    
+
+
+
+ function motor(){
+ document.addEventListener('devicelight', function(event) {
         var lux = event.value;
 		if (lux ==0) 
 		lux= 1;
        var lux2 = Math.log(lux) / Math.log(2);
 	  var lux3 = lux2.toFixed(0);
-	  
+	
 	  document.getElementById('grade').value= lux3;
-	    
-});
-
-
- function motor(){
+	  });  
  var val1= document.getElementById('grade').value;
  var abc= document.getElementById('benz');
-    abc.style.webkitTransform = "rotate("+(parseInt(val1)*10)+"deg)" ;
- 
+    abc.style.transform = "rotate("+(parseInt(val1)*10)+"deg)" ;
+  
  }
  
 </script>
 </head>
-<body>
+<body onload="onLoad()">
 <input type="text" id="grade">
 <div id="benz" style="position:relative;background:red;width:100px;height:200px">
 
