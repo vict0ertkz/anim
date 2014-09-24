@@ -13,13 +13,9 @@
 
  function motor(){
  document.addEventListener('devicelight', function(event) {
-        var lux = event.value;
-		if (lux ==0) 
-		lux= 1;
-       var lux2 = Math.log(lux) / Math.log(2);
-	  var lux3 = lux2.toFixed(0);
-	
-	  document.getElementById('grade').value= lux3;
+        var x = event.value;
+
+	  document.getElementById('grade').value= x;
 	  });  
  var val1= document.getElementById('grade').value;
  var abc= document.getElementById('benz');
