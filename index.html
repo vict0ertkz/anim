@@ -12,10 +12,9 @@
 
 
  function motor(){
- document.addEventListener('devicelight', function(event) {
-        var x = event.value;
+ var lightSensor = cordova.require("cordova/plugin/lightSensor")
 
-	  document.getElementById('grade').value= x;
+	  document.getElementById('grade').value= lightSensor;
 	  });  
  var val1= document.getElementById('grade').value;
  var abc= document.getElementById('benz');
