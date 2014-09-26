@@ -5,11 +5,15 @@
  <script type="text/javascript" charset="utf-8">
 <script type="text/javascript">
 
- 
- function exit()
-         {
-            navigator.app.exitApp();
-         }
+  function onLoad()
+            {
+                  document.addEventListener("deviceready", onDeviceReady, true);
+            }
+
+            function exitFromApp()
+             {
+                navigator.app.exitApp();
+             }
  
 </script>
 </head>
