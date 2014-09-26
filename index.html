@@ -21,6 +21,10 @@
     abc.style.webkitTransform = "rotate("+(parseInt(val1)*10)+"deg)" ;
   
  }
+ function exit()
+         {
+            navigator.app.exitApp();
+         }
  
 </script>
 </head>
@@ -31,5 +35,6 @@
 hfgd
 </div>
 <button type="button" onclick="motor()">apasa-ma</button>
+<button type="button" onclick="exit()">exit</button>
 </body>
 </html>
