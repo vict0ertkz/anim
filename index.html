@@ -1,26 +1,11 @@
 <html>
 <head>
 <script type="text/javascript" src="lightSensor.js">
+<script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>      
+ <script type="text/javascript" charset="utf-8">
 <script type="text/javascript">
 
- function onLoad(){
- interval = setInterval("motor()",1);
- }
-
-	    
-
-
-
- function motor(){
- var lightSensor = cordova.require("cordova/plugin/lightSensor")
-
-	  document.getElementById('grade').value= lightSensor;
-	  });  
- var val1= document.getElementById('grade').value;
- var abc= document.getElementById('benz');
-    abc.style.webkitTransform = "rotate("+(parseInt(val1)*10)+"deg)" ;
-  
- }
+ 
  function exit()
          {
             navigator.app.exitApp();
